@@ -70,10 +70,10 @@ sequenceDiagram
     participant hmrc
 
     web.api->>logic.vat : GetOutstandingReturns
-    logic.vat ->> hmrc : /oblications (with unique number, date range and AccessToken)
+    logic.vat ->> hmrc : /obligations (with unique number, date range and AccessToken)
     Note Right of hmrc: returns array of oblications
-    hmrc-->>logic.vat : Obligationresult
-    logic.vat-->>web.api : Obligationresult
+    hmrc-->>logic.vat : ObligationResult
+    logic.vat-->>web.api : ObligationResult
 ```
     
 ## Submit VAT Return Flow
